@@ -81,7 +81,15 @@ EXPOSE 80
 
 3) контейнер с скриптом парсинга логов <br>
 ![image](https://github.com/user-attachments/assets/452feab2-1fac-4eb6-8a64-42da8945719f) <br>
+```
+  
+FROM python:3.9-alpine
 
+WORKDIR /app
+COPY log_parser.py .
+
+CMD ["python", "log_parser.py"]
+```
 ИТОГ: <br>
 ![image](https://github.com/user-attachments/assets/7f6b6e87-19ac-4cbc-b1c3-1d3607b2ed84) <br>
 
